@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+   <title>Enfold Free Responsive HTML5 Template | Template Stock</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,500,600,300,700' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+   <!-- ionicons Fonts for icons -->
+   <link href="{{ asset('css/ionicons.min.css') }}" rel="stylesheet">
+   <!-- bootstrap -->
+   <link href="{{ asset(('css/bootstrap.css'))}}" rel="stylesheet">
+   <!-- Styles CSS-->
+   <link href="{{ asset('css/style.css')}}" rel="stylesheet">
+   <!-- Animate CSS-->
+   <link href="{{ asset('css/animate.css')}}" rel="stylesheet">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+   <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+</head>
+<style>
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+  display: inline-flex;
+}
+.wrapper .icon{
+  margin: 0 20px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon span{
+  display: block;
+  height: 60px;
+  width: 60px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon span i{
+  line-height: 60px;
+  font-size: 25px;
+}
+.wrapper .icon .tooltip{
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip{
+  top: -70px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.icon .tooltip:before{
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover span{
+  color: #fff;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip{
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip:before{
+  background: #333;
+}
+.wrapper .twitter:hover span,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip:before{
+  background: #333;
+}
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip:before{
+  background: #333;
+}
+.wrapper .github:hover span,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip:before{
+  background: #333;
+}
+.wrapper .youtube:hover span,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip:before{
+  background: #333;
+}
+.product-small-img img  
+{
+  height: 92px;
+  width: 150px;
+  margin: 10px 0;
+  cursor: pointer;
+  display: block;
+  opacity: 0.6;
+}
+.product-small-img img:hover 
+{
+   opacity: 1;
+
+}
+.product-small-img 
+{
+  float: left;
+}
+.product 
+{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+}
+.img-container img
+{
+height: 500px;
+width: 900px;
+}
+@media only screen and (max-width: 991px) {
+   .container{
+      margin-left: 1%;
+      margin-right: 1%;
+      display: block;
+   }
+   .col-md-2 {
+    width: 50%;
+    margin: 10px;
+  }
+  #FILTER{
+    width: 50%;
+    
+  }
+   .AvantageList {
+    margin-left: 1%;
+    
+ }
+ .AvantageList li{
+    flex-direction: column;
+    margin-right: 60px;
+   
+ }
+   .titreAprpos{
+     padding-top: 150px;
+  }
+   .Titre{
+      margin-top: 250px;
+   }
+   .img-container{
+  display: none;
+  
+   }
+   .product-small-img img  
+{
+  height: 100px;
+  width: 200px;
+  margin: 10px 0;
+  cursor: pointer;
+  display: block;
+  
+}
+.product-small-img{
+   margin-left: 40px;
+   margin-bottom: 150px;
+}
+}
+.img-container 
+{
+  float: right;
+  padding: 10px;
+
+}
+#ContainERX {
+   width:100%;
+   margin-top:10%;
+   font-family:sans-serif;
+   letter-spacing:1px;
+}
+#rowX{
+   margin-top: 30px;
+   
+}
+.product-bottom .fa{
+   color : #28a;
+   font-size: 10px;
+}
+.product-bottom h3{
+ font-size: 20px;
+ font-weight: bold;  
+}
+.product-bottom h5{
+ font-size: 15px;
+ font-weight: bold;  
+}
+.overlay{
+   display : block;
+   opacity : 0;
+   position :absolute;
+   top :10%;
+   margin-left: 0;
+   width: 70px;
+   height: 99%;
+   background-color: transparent;
+                                
+}
+.product-top:hover .overlay{
+opacity: 1;
+margin-left: 5%;
+transition: 0.5s;
+}
+
+.overlay .fa{
+   cursor: pointer;
+   background-color: transparent !important;
+   color: #000;
+   height: 35px;
+   width: 35px;
+   font-size: 20px;
+   padding: 7px;
+   margin: 5%;
+   margin-bottom: 5%;
+}
+.overlay .btn-secondary{
+   margin: 6px;
+}
+.AvantageList {
+   margin-left: 30%;
+   
+}
+.AvantageList li{
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+
+}
+.AvantageList li:last-child{
+   border-right: none;
+}
+.AvantageList li a{
+   text-decoration: none;
+   padding :0 20px;
+   display: block;
+}
+.AvantageList li a .icon{
+   width: 40px;
+   height: 40px;
+   text-align: center;
+   overflow: hidden;
+   margin: 0 auto 10px;
+}
+.AvantageList li a .icon .fas,.far {
+width: 100%;
+height: 100%;
+line-height: 40px;
+font-size: 34px;
+transition: 0.5s;
+color: #000;
+}
+.AvantageList li a .icon .fas:last-child {
+color: #B7C8C2;
+}
+.AvantageList li a .icon .far:last-child {
+color: #B7C8C2;
+}
+.AvantageList li a:hover .icon .fas {
+   transform: translateY(-100%);
+
+}
+.AvantageList li a:hover .icon .far{
+   transform: translateY(-100%);
+
+} 
+.AvantageList li a .Name{
+   text-decoration: none;
+   color: black;
+}
+.myButton {
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Times New Roman;
+	font-size:18px;
+	font-style:italic;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+   width: 200px;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+#xxx:hover{
+   box-shadow: 10px 10px 5px rgba(143, 131, 131, 0.808); 
+}
+
+</style>
+<body>
+    <div class="page-loader">
+        <div class="loader">
+           <span class="cssload-loading"></span>
+        </div>
+     </div>
+     <!-- End Page Loader -->
+        <!-- inner-conterner -->
+        <header class="site-header" >
+           <div class="header-inner">
+              <!-- navigation panel -->
+              <div class="container">
+                 <div class="row">
+                    <div class="header-table col-md-12">
+                       <div class="brand">
+                          <a href="index.html">
+                             <img src="{{ asset ('images/logo.png')}}" alt="Enfold">
+                          </a>
+                       </div>
+                       <nav id="nav-wrap" class="main-nav">
+                          <div id="mobnav-btn"> </div>
+                          <ul class="sf-menu">
+                             <li class="current">
+                                <a href="/index">Accueil</a>
+                             </li>
+                             <li>
+                                <a href="/Envente">Projets en ventes</a>                             
+                             </li>
+                             <li>
+                                <a href="#nav">Projets réalisés </a>
+                             </li>
+                             <li>
+                                <a href="#">Contatctez-nous</a>
+                             </li>
+                             
+                             <li class="menu-search-bar">
+                                <a id="search-label"><i class="ion-search"></i></a>
+                                <form class="search-bar" id="searchform">
+                                   <input type="text" placeholder="Search..." name="s">
+                                </form>
+                             </li>
+                          </ul>
+                       </nav>
+                    </div>
+                 </div>
+                 <!-- End navigation panel -->
+              </div>
+              <!-- End navigation panel -->
+           </div>
+        </header>
+        <div class="container" style="width: 80%;">
+        
+            <div class="product" style="width: 80%;">
+           
+               <div class="Titre"> <h2 style=" margin-top:100px; margin-bottom:10px; text-align:center;">Residence Dar el Ferdaous</h2>
+            
+            </div>
+            <hr style="border: 1px solid black;">
+               <div class="product-small-img">
+                    <img src="{{ asset ('images/slide001.JPG')}}"  alt="azea"  onclick="myFunction(this)">
+                    <img src="{{ asset ('images/slide3.JPG')}}"  alt="azea" onclick="myFunction(this)">
+                    <img src="{{ asset ('images/tm2.JPG')}}"  alt="aze" onclick="myFunction(this)">
+                    <img src="{{ asset ('images/slide001.JPG')}}"  alt="aze" onclick="myFunction(this)">
+                           <img src="{{ asset ('images/slide001.JPG')}}"  alt="aze" onclick="myFunction(this)">
+            
+                </div>
+                <div class="img-container">
+                    <img id="ImageBox" src="{{ asset ('images/slide001.JPG')}}" alt="axxze">
+                </div>
+               </div>
+                <div class"apropos" style="margin-top:600px; margin-bottom:10px; ">
+                   
+                   <h2 class="titreAprpos" style="text-align: center;">A propos </h2>
+                   <hr style="border: 1px solid black;">
+                  <br>
+                   <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat odit deserunt ipsa, amet reprehenderit provident molestiae omnis porro ducimus nesciunt mollitia ea in tempore ut aperiam doloribus ex voluptas ab!</h4>
+                 <br><br><br>
+      
+                 <ul class="AvantageList">
+                  <li>
+                     <a href="#">
+                     <div class="icon">
+                        <i class="fas fa-arrow-circle-up"></i>
+                        <i class="fas fa-arrow-circle-up"></i>
+                     </div>
+                     <div class="Name" data-text:"">Ascenseur</div>
+                  </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                     <div class="icon">
+                        <i class="far fa-car-garage"></i>
+                        <i class="far fa-car-garage"></i>
+                     </div>
+                     <div class="Name" data-text:"">Parking</div>
+                  </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                     <div class="icon">
+                        <i class="far fa-building"></i>
+                        <i class="far fa-building"></i>
+                     </div>
+                     <div class="Name" data-text:"">R+2</div>
+                  </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                     <div class="icon">
+                        <i class="fas fa-leaf"></i>
+                        <i class="fas fa-leaf"></i>
+                     </div>
+                     <div class="Name" data-text:"">Jardin</div>
+                  </a>
+                  </li>
+               </ul>
+
+               </div>
+               <div>
+                  <br>
+                  <h2 style="text-align: center;">Appratements disponibles</h2>
+                  <hr style="border: 1px solid black;">
+                  <div id="ContainERX" class="container">
+                     <div class="row">
+                        <div  class="col-md-2 w-25" >
+                           <div id="FILTER"  style="padding:10px 10px 10px 20px; height: 300px; border: 1px solid rgba(90, 77, 77, 0.404);  border-radius: 20px;">
+                              <h3 >Filtrer </h3>
+                              <hr style="border: 1px solid black; border: raduis 10px;">
+                              
+                                 <div>
+                                 <h5 style="font-weight: bold;">Nombre de pièces</h5>
+                                <form action="">
+                                 <input type="radio" name="selectX" class="CheckBox" data-filter="all" 
+                                          >
+                                 <label for="scales"  style="font-weight: lighter;">Afficher tous</label>
+                                 <br>
+                                
+                                 <input type="radio" name="selectX" class="CheckBox" data-filter="S1" 
+                                          >
+                                 <label for="scales"  style="font-weight: lighter;">S+1</label>
+                                 <br>
+                                 <input type="radio" name="selectX" class="CheckBox" data-filter="S2"  
+                                        >
+                                 <label for="scales" style="font-weight: lighter;">S+2</label>
+                                 <br>
+                                 <input type="radio" name="selectX" class="CheckBox" data-filter="S3"  
+                                        >
+                                 <label for="scales" style="font-weight: lighter;">S+3</label>
+                                 <br>
+                                 <input type="radio" name="selectX" class="CheckBox" data-filter="Duplex"  
+                                        >
+                                 <label for="scales" style="font-weight: lighter;">Duplex</label>
+                                 
+                                 
+                              </form>
+                               </div>
+                               
+                               
+                              
+                           </div>
+                        </div>
+                        <div class="col-md w-75">
+                     <div id="rowX" class="row">
+                      
+                        <div class="col-md-6 plan S3" id="xxx" style="margin-bottom: 50px; ">
+                           <div class="product-top">
+                              <img src="{{ asset ('images/plan1.JPG')}}" style="
+                              width:100%
+                              ">
+                              <div class="overlay">
+                                 <button type="button" class="btn btn-secondary" title="Voir plus">
+                                    <i class="fas fa-eye"></i>
+                                 </button>
+
+                                 <button type="button" class="btn btn-secondary" title="Telecharger les plans">
+                                    <i class="fas fa-download"></i>
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="product-bottom text-center">
+                            
+                              <h3>Appartement A02 (S+3)</h3>
+                              <br>
+                                 <div class="row">
+                                   <div class="col"> <span style="font-weight: bold; color:#333"> ÉTAGE: </span> 
+                                    RDC</div>
+                                   <div class="col"><span style="font-weight: bold; color:#333"> Superficie: </span> 300 m²</div>
+                                   <div class="w-100"></div>
+                                   <br>
+                                   <div class="col"><span style="font-weight: bold; color:#333"> Jardin: </span> 300 m²</div>
+                                   <div class="col"><span style="font-weight: bold; color:#333"> Orientation: </span> SUD</div>
+                                   <div class="w-100"></div>
+                                   <div class="col" style="margin-top: 10px;">
+                                   <a href="#" class="myButton">Telecharger Plan</a>
+                                 </div>
+                                 </div>
+                           </div>
+                        </div>
+
+                        <div class="col-md-6 plan S1" id="xxx" style="margin-bottom: 50px; ">
+                           <div class="product-top">
+                              <img src="{{ asset ('images/plan1.JPG')}}">
+                              <div class="overlay">
+                                 <button type="button" class="btn btn-secondary" title="Voir plus">
+                                    <i class="fas fa-eye"></i>
+                                 </button>
+
+                                 <button type="button" class="btn btn-secondary" title="Telecharger les plans">
+                                    <i class="fas fa-download"></i>
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="product-bottom text-center">
+                              
+                              <h3>Appartement A02 (S+1)</h3>
+                              <br>
+                                 <div class="row">
+                                   <div class="col"> <span style="font-weight: bold; color:#333"> ÉTAGE: </span> 
+                                    RDC</div>
+                                   <div class="col"><span style="font-weight: bold; color:#333"> Superficie: </span> 300 m²</div>
+                                   <div class="w-100"></div>
+                                   <br>
+                                   <div class="col"><span style="font-weight: bold; color:#333"> Jardin: </span> 300 m²</div>
+                                   <div class="col"><span style="font-weight: bold; color:#333"> Orientation: </span> SUD</div>
+                                   <div class="w-100"></div>
+                                   <div class="col" style="margin-top: 10px;">
+                                   <a href="#" class="myButton">Telecharger Plan</a>
+                                 </div>
+                                 </div>
+                           </div>
+                        </div>
+
+                        <div class="col-md-6 plan S2" id="xxx" style="margin-bottom: 50px; ">
+                           <div class="product-top">
+                              <img src="{{ asset ('images/plan1.JPG')}}">
+                              <div class="overlay">
+                                 <button type="button" class="btn btn-secondary" title="Voir plus">
+                                    <i class="fas fa-eye"></i>
+                                 </button>
+
+                                 <button type="button" class="btn btn-secondary" title="Telecharger les plans">
+                                    <i class="fas fa-download"></i>
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="product-bottom text-center">
+                              
+                              <h3>Appartement A02 (S+2)</h3>
+                              <br>
+                              <div class="row">
+                                <div class="col"> <span style="font-weight: bold; color:#333"> ÉTAGE: </span> 
+                                 RDC</div>
+                                <div class="col"><span style="font-weight: bold; color:#333"> Superficie: </span> 300 m²</div>
+                                <div class="w-100"></div>
+                                <br>
+                                <div class="col"><span style="font-weight: bold; color:#333"> Jardin: </span> 300 m²</div>
+                                <div class="col"><span style="font-weight: bold; color:#333"> Orientation: </span> SUD</div>
+                                <div class="w-100"></div>
+                                <div class="col" style="margin-top: 10px;">
+                                <a href="#" class="myButton">Telecharger Plan</a>
+                              </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        
+                        <div class="col-md-6 plan S3" id="xxx" style="margin-bottom: 50px; ">
+                           <div class="product-top">
+                              <img src="{{ asset ('images/plan1.JPG')}}" style="
+                              width:100%
+                              ">
+                              <div class="overlay">
+                                 <button type="button" class="btn btn-secondary" title="Voir plus">
+                                    <i class="fas fa-eye"></i>
+                                 </button>
+
+                                 <button type="button" class="btn btn-secondary" title="Telecharger les plans">
+                                    <i class="fas fa-download"></i>
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="product-bottom text-center">
+                              
+                              <h3>Appartement A02 (S+3)</h3>
+                              <br>
+                              <div class="row">
+                                <div class="col"> <span style="font-weight: bold; color:#333"> ÉTAGE: </span> 
+                                 RDC</div>
+                                <div class="col"><span style="font-weight: bold; color:#333"> Superficie: </span> 300 m²</div>
+                                <div class="w-100"></div>
+                                <br>
+                                <div class="col"><span style="font-weight: bold; color:#333"> Jardin: </span> 300 m²</div>
+                                <div class="col"><span style="font-weight: bold; color:#333"> Orientation: </span> SUD</div>
+                                <div class="w-100"></div>
+                                <div class="col" style="margin-top: 10px;">
+                                <a href="#" class="myButton">Telecharger Plan</a>
+                              </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="col-md-6 plan S1" id="xxx" style="margin-bottom: 50px; ">
+                           <div class="product-top">
+                              <img src="{{ asset ('images/plan1.JPG')}}">
+                              <div class="overlay">
+                                 <button type="button" class="btn btn-secondary" title="Voir plus">
+                                    <i class="fas fa-eye"></i>
+                                 </button>
+
+                                 <button type="button" class="btn btn-secondary" title="Telecharger les plans">
+                                    <i class="fas fa-download"></i>
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="product-bottom text-center">
+                              
+                              <h3>Appartement A02 (S+1)</h3>
+                              <br>
+                              <div class="row">
+                                <div class="col"> <span style="font-weight: bold; color:#333"> ÉTAGE: </span> 
+                                 RDC</div>
+                                <div class="col"><span style="font-weight: bold; color:#333"> Superficie: </span> 300 m²</div>
+                                <div class="w-100"></div>
+                                <br>
+                                <div class="col"><span style="font-weight: bold; color:#333"> Jardin: </span> 300 m²</div>
+                                <div class="col"><span style="font-weight: bold; color:#333"> Orientation: </span> SUD</div>
+                                <div class="w-100"></div>
+                                <div class="col" style="margin-top: 10px;">
+                                <a href="#" class="myButton">Telecharger Plan</a>
+                              </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        
+
+                        
+                     </div>
+                  </div>
+                  </div>
+                  </div>
+               </div>
+               <div>
+                  <br><br><br>
+                  <h2 style="text-align: center; ">Emplacement</h2>
+                  <hr style="border: 1px solid black;">
+                  <br>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d266.65634084961516!2d10.212733766798019!3d36.863107855342136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2cb1bbd966e8d%3A0x1c03f17c0ffb385f!2sResidence%20LA%20CIBLE!5e0!3m2!1sfr!2stn!4v1629648362194!5m2!1sfr!2stn" width="1100" height="600" style="border:0.5;" allowfullscreen="" loading="lazy"></iframe> 
+               </div>
+
+              
+
+                
+            </div>
+        
+        
+    
+     
+      <!-- End Footer area -->
+      <!-- Footer -->
+    
+      <!-- End Footer -->
+   
+        <!-- Placed js files at the end of the document so the pages load faster -->
+        <script>
+        function myFunction(smallImg)
+        {
+           var fullImg = document.getElementById("ImageBox");
+           fullImg.src= smallImg.src;
+        }
+        </script>
+   <script src="{{ asset('js/jquery.min.js') }}"></script>
+   <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+   <script src="{{ asset('js/superfish.js') }}"></script>
+   <script src="{{ asset('js/jquery.easing.js') }}"></script>
+   <script src="{{ asset('js/wow.js') }}"></script>
+   <script src="{{ asset('js/jquery.isotope.min.js') }}"></script>
+   <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+   <script src="{{ asset('js/jquery.magnific-popup.js') }}"></script>
+   <script src="{{ asset('js/jflickrfeed.min.js') }}"></script>
+   <script src="{{ asset('js/jquery.fitvids.js') }}"></script>
+   <script src="{{ asset('js/jquery.fractionslider.min.js') }}"></script>
+   <script src="{{ asset('js/jquery-ui-1.10.4.custom.min.js') }}"></script>
+   <script type="text/javascript" src="{{ asset('js/SmoothScroll.js') }}"></script>
+   <script src="{{ asset('js/main.js') }}"></script>
+   <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+   <script src="{{ asset('js/Filter.js') }}"></script>
+</body>
+</html>
